@@ -11,9 +11,13 @@ th {
     color: #2678A7;
 }
 
+tr:nth-child(2n) {
+    background: #EDF7FD;
+}
+
 table, td, th {
     border-collapse: collapse;
-    border: 2px solid #EDF7FD;
+    border: 3px solid #EDF7FD;
     padding: 20px 46px;
 }
 
