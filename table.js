@@ -11,7 +11,7 @@ function createInputCell(id, value) {
         "class=\"inputStyle\""+
         "id=\"" + id + "_input\"" +
         "size=\"10\" " +
-        "align=\"center\" " +
+        "align=\"center\" " + "border=\"0\" " +
         "value=\"" + formatFloat(value) + "\" " +
         "onchange=\"onValueChanged(\'"  + id+ "\')\">" +
     "</input>";
@@ -76,7 +76,7 @@ function createHeaderRow(context, table) {
 	// var curr_table = document.getElementById(table_id);
 	var row = document.createElement('tr');
 	for (i = 0; i < context.length; i++) {
-		var th = document.createElement('th');
+        var th = document.createElement('th');
 		th.innerHTML = context[i];
 		row.appendChild(th);
 	}
@@ -93,7 +93,7 @@ function createRow(context, table) {
     if (curName == undefined) {
         row.appendChild(createTextCell(context.id + "_name", context.id.toUpperCase()));
     } else {
-        row.appendChild(createTextCell(context.id + "_name", curName));
+        row.appendChild(createTextCell(context.id + "_name", curName + ", "+ context.id.toUpperCase()));
     }
     row.appendChild(createInputCell(context.id, context.value));
     row.appendChild(createTextCell(context.id + '_duty', formatFloat(context.duty)));

@@ -1,3 +1,5 @@
+
+
 var costTable = {
     id:'cost_table',
     tax:{
@@ -6,7 +8,7 @@ var costTable = {
         tax:NaN, // пошлина
         percent:NaN, // процент от суммы превышения 
     },
-    header: ["currency", "value", "duty", "result"],
+    header: ["Валюта", "Стоимость<br/>посылки", "Налог на<br/>посылку", "Итоговая<br/>стоимость"],
     data: [
     ],
 };
@@ -15,7 +17,7 @@ var taxDataEur = {
     cur:'eur', // валюта пересчёта таможенной стоимости
     lim:22, // ограничение стоимости
     tax:5, // пошлина
-    percent:30, // процент от суммы превышения
+    percent:15, // процент от суммы превышения
 };
 
 var curIdList = ['byn', 'usd', 'eur', 'rub', 'uah', 'pln', 'sek'];

@@ -13,6 +13,7 @@ th {
 table, td, th {
     border-collapse: collapse;
     border: 1px solid #F0F0F0;
+    padding: 15px;
 }
 
 input {
@@ -43,8 +44,8 @@ input {
 .inputStyle {
     float: left;
     border-radius: 5px;
-    border: 2px solid #C0C0F0;
-    background-color: #FFFFFF;
+    border: 0px solid #F0F0F0;
+    background-color: #F0F0F0;
 }
 
 .inputTdStyle {
