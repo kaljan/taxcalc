@@ -20,7 +20,7 @@ var taxDataEur = {
     percent:15, // процент от суммы превышения
 };
 
-var curIdList = ['byn', 'usd', 'eur', 'rub', 'uah', 'pln', 'sek'];
+var curIdList = ['byn', 'usd', 'eur', 'gbp', 'rub', 'uah', 'pln', 'sek'];
 
 /**
  * 
@@ -39,7 +39,9 @@ function convertTaxData(to, from) {
  * @param {*} tax 
  */
 function calcTax(value, tax) {
-    return ((value - tax.lim) * tax.percent) / 100 + tax.tax;
+    if (value > tax.lim)
+        return ((value - tax.lim) * tax.percent) / 100 + tax.tax;
+    else return 0;
 }
 
 /**
